@@ -1,0 +1,134 @@
+*********************************************
+* Key Signing Policy for <YOUR NAME HERE>   *
+* Version 2022-01-23                        *
+*********************************************
+
+<YOUR PGP FINGERPRINT HERE>
+
+This policy is used for signatures made by my GnuPG key <KEY ID> -
+starting from <DATE>.  (Some signatures before this date were also
+made under the following conditions.  However, no key was ever signed
+without checking the identity of the person based on a government-issued
+ID-card and without checking the fingerprint of the respective key.)
+
+I am more than happy to sign other people's public keys, assuming the
+steps outlined in this policy are followed.  However, when I agree to
+sign someone else's key, I expect that they will be willing and able to
+sign my public key in return.  This will help to strengthen the web of
+trust with mutual verification.
+
+
+REQUIREMENTS BEFORE SIGNING A KEY
+
+The following requirements need to be met by the signee:
+
+   - Meet in person, either individually or at a key signing party;
+   - Prepare a printed copy of the fingerprint of your key, including
+     all UIDs you want to have signed by me;
+   - Present at least one valid government-issued photo ID.
+
+The following requirements need to be met by the key / the UIDs of the
+key:
+
+   - The key contains a self-signature of the signee;
+   - The key is not revoked and the (optional) validity date of the key
+     is (reasonable far away) in the future;
+   - The UIDs contain the real name of the signee which is stated in the
+     government-issued ID.
+
+Note:  I won't sign anonymous or pseudonymous UIDs, i.e. I must be able
+to tie the UID to your name on the government-issued ID.
+
+Note:  Ideally, you tell me before the meeting which kind of ID you
+would like present so I am able to understand its security features when
+checking the ID, especially if you plan to present a foreign ID to me.
+I will only sign a key if I feel comfortable that you really are who you
+claim to be.
+
+
+VERIFICATION
+
+Before I sign a key, I
+
+   - Verify the identity of the person owning the to-be-signed key by
+     looking at their identity card or equivalent official proof of
+     identity;
+   - Receive the key fingerprint from the key owner (this may be on a
+     piece of paper or the fingerprint is confirmed by the owner during
+     a key signing party).
+
+A signature is always on the UID.  By signing an UID, I confirmed for
+myself that at the moment of the check
+
+   - The person who gave me the fingerprint of that key was reasonable
+     identifiable on the government-issued ID;
+   - The government-issued ID was valid and did not cause any
+     suspicion/indication of fraud;
+   - The claimed name could be tied to the to-be-signed UID.
+
+
+SIGNING PROCESS
+
+Upon achieving positive identification, exchange of written or printed
+and confirmed copies of the fingerprint of the public key, along with
+the UID(s) to be signed and the signer's email address to which the
+signing request will be sent, the signee will send an email to the
+signer's specified email address for each UID he or she wishes to have
+signed.  Each email must be signed with the signee's private key, and
+the sending email address must match the UID exactly.
+
+After verification of the signee's signature, the fingerprint of the
+public key and the UID, I will then locally sign each UID requested.
+
+After signing a UID of a signee's public key, I will send an email
+encrypted to that specific UID, including the signed public key.  I will
+sign this email with my own key.
+
+When you receive this email, you may import my signature into your
+public key ring.  You may also push the signature to a public key server
+(if you wish to do so).
+
+Requiring the signee to send a signed email from each UID address and
+then sending the signed public keys back to the UID address encrypted
+ensures that the signee has control of both the email account claimed by
+the UID and the public/private key pair used by the signee.  Skipping
+either of these steps could potentially allow signatures to be made
+which do not accurately reflect the true identity of the signee.
+
+
+SIGNING SUBSEQUENT KEYS BEFORE EXPIRATION/REVOCATION OF OLD KEYS
+
+If I have signed your public key and it is set to expire in the near
+future, or if you decide to generate a new key pair and revoke your old
+public key, I will sign your new public key without needing to meet in
+person if the following conditions are met:
+
+   - Send me an email signed with your old key.  This email needs to
+     list the full fingerprint of the new key, along with the new
+     primary UID (even if it remains as the old key);
+   - The old key must not have expired or been revoked before the email
+     is sent;
+   - The new public key is self-signed by the signee's old and new key;
+   - When I receive your message and verify its signature, I will send
+     you a signed email acknowledging receipt;
+   - Then follow the signing process as outlined above using the newly
+     generated key to sign your email request.
+
+Note:  I will only sign the new primary UID and any sub-UIDs that I had
+previously signed on the old key.  New sub-UIDs will be signed at my
+discretion.
+
+
+MISCELLANEOUS
+
+Signatures by my GnuPG key(s) do not have any legal relevance.
+Especially they do not comply to the characteristics of a "qualifizierte
+elektronische Signatur" (qualified electronic signature) as outlined in
+§2 Nr. 3 Gesetz über Rahmenbedingungen für elektronische Signaturen
+(SigG 2001).
+
+
+CHANGELOG
+
+2014-01-07    Implementation of the policy.
+2022-01-23    Upload to Github
